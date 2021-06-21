@@ -1,3 +1,5 @@
+
+    console.log('echo '+ process.env.TEXTNOW_COOKIES);
 module.exports = {
   username: process.env.TEXTNOW_USERNAME || '',
   password: process.env.TEXTNOW_PASSWORD || '',
