@@ -130,15 +130,16 @@ const actionFunc = async (
   const arrPassword = password.split('|');
   const arrCookies = cookies.split('|');
   const arrRecipients = recipient.split('|');
+    let tem_recipient = '';
   if (arrUsername.length === arrPassword.length) {
     for (let i = 0, length = arrUsername.length; i < length; i++) {
       const strUsername = arrUsername[i];
       const strPassword = arrPassword[i];
       const strCookies = arrCookies[i];
       if(arrRecipients.length>1){
-         let tem_recipient = arrRecipients[i] || arrRecipients[0]
+          tem_recipient = arrRecipients[i] || arrRecipients[0]
       }else{
-         let tem_recipient = arrRecipients[0]
+          tem_recipient = arrRecipients[0]
       }
       console.log(`User: ${strUsername} start...`);
       await actionFunc(strUsername, strPassword, strCookies,
