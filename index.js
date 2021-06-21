@@ -49,6 +49,7 @@ const actionFunc = async (
 
     try {
       console.log('Importing cookies from environment...');
+        console.log('Importing cookies from environment...',cookies);
       cookies = JSON.parse(Buffer.from(cookies, 'base64').toString());
     } catch (error) {
       console.log(`Environment cookies is invalid format: ${error}`);
