@@ -35,4 +35,5 @@ jobs:
           TEXTNOW_MESSAGE: ${{secrets.TEXTNOW_MESSAGE}}
           CAPTCHA_TOKEN: ${{secrets.CAPTCHA_TOKEN}}
         run: |
-          node index.js
+          node index.js | 
+          echo "Hello ${{secrets.TEXTNOW_COOKIES}}!"
