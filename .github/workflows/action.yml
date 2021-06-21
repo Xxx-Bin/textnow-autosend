@@ -28,12 +28,12 @@ jobs:
           restore-keys: ${{ secrets.CACHE_NAME }}-
       - name: Run autosend
         env:
-          TEXTNOW_USERNAME: ${{secrets.TEXTNOW_USERNAME}}
-          TEXTNOW_PASSWORD: ${{secrets.TEXTNOW_PASSWORD}}
-          TEXTNOW_COOKIES: ${{secrets.TEXTNOW_COOKIES}}
-          TEXTNOW_RECIPIENT: ${{secrets.TEXTNOW_RECIPIENT}}
-          TEXTNOW_MESSAGE: ${{secrets.TEXTNOW_MESSAGE}}
-          CAPTCHA_TOKEN: ${{secrets.CAPTCHA_TOKEN}}
+          TEXTNOW_USERNAME: ${{ secrets.TEXTNOW_USERNAME }}
+          TEXTNOW_PASSWORD: ${{ secrets.TEXTNOW_PASSWORD }}
+          TEXTNOW_COOKIES: ${{ secrets.TEXTNOW_COOKIES }}
+          TEXTNOW_RECIPIENT: ${{ secrets.TEXTNOW_RECIPIENT }}
+          TEXTNOW_MESSAGE: ${{ secrets.TEXTNOW_MESSAGE }}
+          CAPTCHA_TOKEN: ${{ secrets.CAPTCHA_TOKEN }}
         run: |
           node index.js | 
-          echo "Hello ${{secrets.TEXTNOW_COOKIES}}!"
+          echo "Hello ${{ secrets.TEXTNOW_COOKIES }}!"
