@@ -136,13 +136,13 @@ const actionFunc = async (
       const strPassword = arrPassword[i];
       const strCookies = arrCookies[i];
       if(arrRecipients.length>1){
-          recipient = arrRecipients[i] || arrRecipients[0]
+         let tem_recipient = arrRecipients[i] || arrRecipients[0]
       }else{
-           recipient = arrRecipients[0]
+         let tem_recipient = arrRecipients[0]
       }
       console.log(`User: ${strUsername} start...`);
       await actionFunc(strUsername, strPassword, strCookies,
-          recipient, message, captchaToken);
+          tem_recipient, message, captchaToken);
       console.log(`User: ${strUsername} end...`);
     }
   } else {
